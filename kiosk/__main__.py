@@ -5,7 +5,7 @@ from cart import cart
 from order import extra_order, canceled, show_orders
 from payment import check_out, member_ship
 from file_io import save_order_to_file
-from constants import MENU_LIST
+from constants import menu_list
 
 
 import datetime
@@ -24,7 +24,7 @@ if __name__ == "__main__":
             order_num = select_menu()
             if order_num is None:
                 continue
-            selected_menu = MENU_LIST[order_num]
+            selected_menu = menu_list[order_num]
 
             selected_flavors = select_flavors(selected_menu)
             if selected_flavors is None or not selected_flavors:

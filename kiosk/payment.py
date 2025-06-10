@@ -1,4 +1,6 @@
 # 결제 및 포인트 적립 함수
+from order import show_orders
+
 def check_out(orders):
     """
     최종 결제 금액 계산 함수
