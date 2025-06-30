@@ -1,4 +1,4 @@
-# 📊 Telco Customer Churn 분석 프로젝트
+# 📊 Telco 고객 이탈 분석 프로젝트
 
 ## 1️⃣ 프로젝트 개요
 
