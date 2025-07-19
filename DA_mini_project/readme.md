@@ -53,9 +53,9 @@
 
 ## 4️. 인사이트
 
-- **가입 초기(6개월 이하), 월 요금이 높은 고객군의 이탈 확률이 높음.**
-- `Month-to-month` 계약 및 `Electronic check` 결제 방식 고객의 이탈률이 높음.
-- 시니어, 파트너/부양가족이 없는 고객군의 이탈률이 상대적으로 높음.
+1) **가입 초기(6개월 이하), 월 요금이 높은 고객군의 이탈 확률이 높음.**
+2) `Month-to-month` 계약 및 `Electronic check` 결제 방식 고객의 이탈률이 높음.
+3) 시니어, 파트너/부양가족이 없는 고객군의 이탈률이 상대적으로 높음.
 
 ---
 
@@ -83,18 +83,18 @@
 
 ## 6️. 향후 계획
 
-- 이탈 예측 모델 개발(RandomForest, XGBoost)
-- LTV 기반 이탈 방지 시뮬레이션 및 KPI 설계
-- 분석 리포트 시각화 및 자동화 보고 대시보드 개발
+1) 이탈 예측 모델 개발(RandomForest, XGBoost)
+2) LTV 기반 이탈 방지 시뮬레이션 및 KPI 설계
+3) 분석 리포트 시각화 및 자동화 보고 대시보드 개발
 
 ---
 
 ## 7. 파일 구성
 
-- `Telco_Churn_EDA.ipynb` : 전체 분석 코드
-- `charts/` : 시각화 이미지
-- `data/WA_Fn-UseC_-Telco-Customer-Churn.csv` : 원본 데이터
-- `README.md` : 프로젝트 요약 및 결과 정리
+1) `Telco_Churn_EDA.ipynb` : 전체 분석 코드
+2) `charts/` : 시각화 이미지
+3) `data/WA_Fn-UseC_-Telco-Customer-Churn.csv` : 원본 데이터
+4) `README.md` : 프로젝트 요약 및 결과 정리
 
 ---
 
