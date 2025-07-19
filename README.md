@@ -85,7 +85,7 @@
 - 이름: 김지희  
 - 캠프: Why Not SW Camp 7기  
 - 목표: 데이터 분석가  
-- 💻 [지희의 블로그 보기](https://jihuikim45.github.io) (작성 중)
+- 💻 [지희의 블로그 보기](https://jihuikim45.github.io)
 
 ---
 
