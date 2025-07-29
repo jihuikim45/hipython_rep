@@ -50,16 +50,16 @@ VALUES (%s, %s, %s);
 
 ## 5. 📂 폴더 구조
 
-📂WebDataCrawling/
-├── data/
-│ └── 📄gmarket*best.csv
-| └── 📄my_database.db
-├── sql/
-│ └── 📄gmarket_best.sql
-├── src/
-│ └── 📄gmarket_save.py
-├── notebooks/
-│ └── 📄실습*지마켓랭킹수집.ipynb
+📂WebDataCrawling/  
+├── data/  
+│ └── 📄gmarket*best.csv  
+| └── 📄my_database.db  
+├── sql/  
+│ └── 📄gmarket_best.sql  
+├── src/  
+│ └── 📄gmarket_save.py  
+├── notebooks/  
+│ └── 📄실습*지마켓랭킹수집.ipynb  
 ├── 📄README.md
 
 ## 6. 실행 예시
