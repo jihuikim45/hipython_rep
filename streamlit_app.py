@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import pydeck as pdk
 import plotly.express as px
+import plotly.graph_objects as go
+
 
 st.set_page_config(page_title="츄러스미", layout="wide")
 
@@ -98,16 +100,60 @@ if menu == "홈":
     )
     st.write("")
 
-    # 카드형 버튼
-    col1, col2 = st.columns(2)
+    # 예시 데이터 생성 (여기서는 랜덤, 나중에 실제 데이터로 교체 가능)
+    import pandas as pd
+    import numpy as np
 
-    with col1:
-        if st.button("🏥 병원 추천 서비스", use_container_width=True):
-            menu = "병원 추천"
+    dates = pd.date_range("2025-07-20", periods=30)
+    np.random.seed(42)
 
-    with col2:
-        if st.button("📝 진단 서비스", use_container_width=True):
-            menu = "진단"
+    data = {
+        "전체 평균": np.random.normal(50, 5, size=30),   # 평균은 50 전후, 변동폭 적당히
+        "우울감": np.random.randint(20, 80, size=30),    # 항목별은 확연한 변동
+        "집중력": np.random.randint(30, 90, size=30),
+        "수면": np.random.randint(10, 70, size=30),
+        "불안": np.random.randint(25, 95, size=30),
+        "대인관계": np.random.randint(15, 85, size=30),
+        "의욕": np.random.randint(20, 100, size=30),
+    }
+    df = pd.DataFrame(data, index=dates)
+
+    # 📊 그래프
+    fig = go.Figure()
+
+    # 전체 평균 → 굵은 실선
+    fig.add_trace(go.Scatter(
+        x=df.index,
+        y=df["전체 평균"],
+        mode="lines+markers",
+        name="전체 평균",
+        line=dict(color="royalblue", width=4),
+        marker=dict(size=8, symbol="circle")
+    ))
+
+    # 항목별 → 얇은 점선, 변동 폭 크게
+    colors = ["red", "green", "orange", "purple", "pink", "gray"]
+    for i, col in enumerate(df.drop(columns=["전체 평균"]).columns):
+        fig.add_trace(go.Scatter(
+            x=df.index,
+            y=df[col],
+            mode="lines+markers",
+            name=col,
+            line=dict(color=colors[i], width=2, dash="dot"),
+            marker=dict(size=5)
+        ))
+
+    fig.update_layout(
+        title="📈 감정 변화 추이 (확연한 변동)",
+        xaxis_title="날짜",
+        yaxis_title="점수",
+        yaxis=dict(range=[0, 100]),  # 점수 범위 고정 → 변동이 확연히 보임
+        template="plotly_white",
+        hovermode="x unified"
+    )
+
+    st.plotly_chart(fig, use_container_width=True)
+
 
 # ===== 챗봇 페이지 =====
 elif menu == "챗봇":
